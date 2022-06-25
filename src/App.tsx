@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 
 import "./App.css";
-import MainPage from "./pages/mainPage";
+import MainPage from "./pages/MainPage";
 
 const queryClient = new QueryClient();
 function App() {

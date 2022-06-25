@@ -1,7 +1,11 @@
 import React, { Suspense } from "react";
 
 const MainPage = () => {
-  return <div>메인페이지</div>;
+  return (
+    <>
+      <div>sdsd</div>
+    </>
+  );
 };
 
 export default MainPage;

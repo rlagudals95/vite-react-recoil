@@ -2,4 +2,5 @@
 export {COLOR} from "./Color";
 export {FontSize} from "./FontSize";
 
-export const PRODUCTION = process.env.NODE_ENV === "production";
+export const PRODUCTION = "production";
+// process.env.NODE_ENV === "
