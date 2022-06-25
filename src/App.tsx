@@ -2,64 +2,27 @@ import React, { Suspense } from "react";
 import { RecoilRoot } from "recoil";
 
 import "./App.css";
-import { Counter } from "./Counter";
-import { ErrorBoundary } from "./ErrorBoundary";
-import { GithubProfile } from "./GithubProfile";
 
 function App() {
   return (
     <div className="App">
       <header className="p-4">
-        <div className="flex items-center justify-center bg-opacity-50">
+        <div className="flex items-center justify-between bg-opacity-50">
           <div className="mx-2 text-center">
-            <h1 className="text-4xl font-extrabold xs:text-5xl md:text-6xl">
+            <div className="font-extrabold xs:text-3xl md:text-3xl">
               <a
                 target="_blank"
                 className="hover:text-blue-400"
                 href="https://recoiljs.org/docs/introduction/getting-started"
               >
-                Recoil
-              </a>{" "}
-              Example
-            </h1>
+                레시피 프로젝트
+              </a>
+            </div>
           </div>
+          <div>메뉴</div>
         </div>
       </header>
-      <ErrorBoundary>
-        {/* @ts-expect-error Type '{ children: Element[]; }' is not assignable to type 'IntrinsicAttributes & RecoilRootProps'.ts(2322) */}
-        <RecoilRoot>
-          <div className="flex items-center justify-center">
-            <div className="p-8 mx-auto text-gray-300 bg-gray-800 border border-gray-700 rounded-lg min-w-min lg:py-12 lg:px-14">
-              <div className="mb-10">
-                <h1 className="text-2xl font-bold">
-                  <i className="text-3xl leading-none text-yellow-300 align-bottom mdi mdi-star" />{" "}
-                  Counter Example (Atom & Selector)
-                </h1>
-              </div>
-              <div className="mb-10">
-                <Counter />
-              </div>
-            </div>
-          </div>
-          <div className="flex items-center justify-center mt-10">
-            <div className="p-8 mx-auto text-gray-300 bg-gray-800 border border-gray-700 rounded-lg min-w-min lg:py-12 lg:px-14">
-              <div className="mb-10">
-                <h1 className="text-2xl font-bold">
-                  <i className="text-3xl leading-none text-yellow-300 align-bottom mdi mdi-star" />
-                  Github Finder Example (Atom & Async Selector)
-                </h1>
-              </div>
-              <div className="flex justify-center">
-                <div className="mb-10">
-                  <Suspense fallback="Loading...">
-                    <GithubProfile />
-                  </Suspense>
-                </div>
-              </div>
-            </div>
-          </div>
-        </RecoilRoot>
-      </ErrorBoundary>
+
       <footer className="w-full px-2 py-4 mt-10 bg-gray-100">
         <div className="flex items-center justify-between my-4">
           <p className="inline-flex px-2 pt-6 text-blue-500">

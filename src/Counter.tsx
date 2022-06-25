@@ -1,7 +1,7 @@
 import React from "react";
 import { atom, selector, useRecoilState, useRecoilValue } from "recoil";
 
-const countAtom = atom({
+export const countAtom = atom({
   key: "countState",
   default: 0,
 });
